@@ -17,11 +17,11 @@ definition to your `pom.xml`:
 ```
 
 
-### The Most Recent Release
+### The Most Recent SNAPSHOT
 
 With Leiningen:
 
-    [clojurewerkz/vclock "1.0.0"]
+    [clojurewerkz/vclock "1.0.0-SNAPSHOT"]
 
 
 With Maven:
@@ -29,7 +29,7 @@ With Maven:
     <dependency>
       <groupId>clojurewerkz</groupId>
       <artifactId>vclock</artifactId>
-      <version>1.0.0</version>
+      <version>1.0.0-SNAPSHOT</version>
     </dependency>
 
 
