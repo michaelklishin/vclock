@@ -51,7 +51,7 @@ VClock is built from the ground up for Clojure 1.3.0 and up.
 
 ## Continuous Integration Status
 
-[![Continuous Integration status](https://secure.travis-ci.org/clojurewerkz/vclock.png)](http://travis-ci.org/clojurewerkz/vclock)
+[![Continuous Integration status](https://secure.travis-ci.org/michaelklishin/vclock.png)](http://travis-ci.org/michaelklishin/vclock)
 
 
 
