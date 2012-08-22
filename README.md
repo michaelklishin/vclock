@@ -6,7 +6,7 @@ VClock is an implementation of vector clocks, roughly ported from [Riak Core](ht
 
 ## Artifacts
 
-... artifacts are [released to Clojars](https://clojars.org/clojurewerkz/vclock). If you are using Maven, add the following repository
+VClock artifacts are [released to Clojars](https://clojars.org/clojurewerkz/vclock). If you are using Maven, add the following repository
 definition to your `pom.xml`:
 
 ``` xml
