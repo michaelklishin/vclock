@@ -56,3 +56,31 @@
           c (vclock/merge a b)]
       (is (= c (vclock/fresh :a (VClockEntry. 6 6)
                              :b (VClockEntry. 7 7)))))))
+
+
+(deftest test-pruning
+  (testing "vclocks greater than big-vclock are pruned"
+    (let [ts       (- (vclock/timestamp-in-seconds) 500)
+          a        (VClockEntry. 8 (+ 5 ts))
+          b        (VClockEntry. 6 (+ 10 ts))
+          c        (VClockEntry. 2 ts)
+          d        (VClockEntry. 3 (+ ts 100))
+          vc       (sorted-map :a a :b b :c c :d d)
+          expected (sorted-map :d d :b b)]
+      (is (= expected (vclock/prune vc :small-vclock 1 :big-vclock 2)))))
+  (testing "vclocks lesser than small-vclock are not pruned"
+    (let [ts       (- (vclock/timestamp-in-seconds) 500)
+          a        (VClockEntry. 8 (+ 5 ts))
+          b        (VClockEntry. 6 (+ 10 ts))
+          c        (VClockEntry. 2 ts)
+          d        (VClockEntry. 3 (+ ts 100))
+          vc       (sorted-map :a a :b b :c c :d d)]
+      (is (= vc (vclock/prune vc :small-vclock 10 :big-vclock 20)))))
+  (testing "vclocks of size between small-vclock and big-vclock are pruned based on their age"
+    (let [ts       (- (vclock/timestamp-in-seconds) 200)
+          a        (vclock/entry 8 (+ 5 ts))
+          b        (vclock/entry 6 (+ 10 ts))
+          c        (vclock/entry 2 ts)
+          d        (vclock/entry 3 (+ ts 100))
+          vc       (sorted-map :a a :b b :c c :d d)]
+      (is (= vc (vclock/prune vc :small-vclock 1 :big-vclock 10 :old-vclock 99))))))
