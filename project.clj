@@ -1,4 +1,4 @@
-(defproject clojurewerkz/vclock "1.0.0-SNAPSHOT"
+(defproject clojurewerkz/vclock "1.1.0-SNAPSHOT"
   :description "A vector clock implementation roughly ported from Riak Core"
   :dependencies [[org.clojure/clojure  "1.3.0"]
                  [clojurewerkz/support "0.7.0-beta1"]]
