@@ -21,7 +21,7 @@ definition to your `pom.xml`:
 
 With Leiningen:
 
-    [clojurewerkz/vclock "1.0.0-SNAPSHOT"]
+    [clojurewerkz/vclock "1.0.0"]
 
 
 With Maven:
@@ -29,14 +29,14 @@ With Maven:
     <dependency>
       <groupId>clojurewerkz</groupId>
       <artifactId>vclock</artifactId>
-      <version>1.0.0-SNAPSHOT</version>
+      <version>1.0.0</version>
     </dependency>
 
 
 
 ## Documentation & Examples
 
-TBD
+See documentation strings for `clojurewerkz.vclock.core` functions and [our test suite](https://github.com/michaelklishin/vclock/blob/master/test/clojurewerkz/vclock/core_test.clj).
 
 
 ## Community
@@ -58,7 +58,7 @@ VClock is built from the ground up for Clojure 1.3.0 and up.
 ## VClock Is a ClojureWerkz Project
 
 VClock is part of the [group of Clojure libraries known as ClojureWerkz](http://clojurewerkz.org), together with
-[Monger](http://clojuremongodb.info), [Welle](http://clojureriak.info), [Langohr](https://github.com/michaelklishin/langohr), [Elastisch](https://github.com/clojurewerkz/elastisch), [Quartzite](https://github.com/michaelklishin/quartzite) and several others.
+[Welle](http://clojureriak.info), [Monger](http://clojuremongodb.info), [Langohr](https://github.com/michaelklishin/langohr), [Elastisch](https://github.com/clojurewerkz/elastisch), [Quartzite](https://github.com/michaelklishin/quartzite) and several others.
 
 
 ## Development
