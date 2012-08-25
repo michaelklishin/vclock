@@ -17,7 +17,7 @@ definition to your `pom.xml`:
 ```
 
 
-### The Most Recent SNAPSHOT
+### The Most Recent Release
 
 With Leiningen:
 
