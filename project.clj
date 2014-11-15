@@ -2,8 +2,7 @@
   :description "A vector clock implementation roughly ported from Riak Core"
   :dependencies [[org.clojure/clojure  "1.6.0"]
                  [clojurewerkz/support "0.7.0-beta1"]]
-  :profiles {:1.4 {:dependencies [[org.clojure/clojure "1.4.0"]]}
-             :1.5 {:dependencies [[org.clojure/clojure "1.5.0"]]}
+  :profiles {:1.5 {:dependencies [[org.clojure/clojure "1.5.0"]]}
              :1.7 {:dependencies [[org.clojure/clojure "1.7.0-alpha4"]]}
              :master {:dependencies [[org.clojure/clojure "1.7.0-master-SNAPSHOT"]]}
              :dev {:resource-paths ["test/resources"]
